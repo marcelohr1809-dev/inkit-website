@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#078BCC">
+<title>INKIT | Hidrátate diferente</title>
+<meta name="description" content="Conoce INKIT: agua gasificada con electrolitos y sabor a limón. Hidrátate diferente.">
+
+<style>
+:root {
+  --azul: #078BCC;
+  --azul-oscuro: #075985;
+  --verde: #72B842;
+  --verde-oscuro: #4D8F2D;
+  --fondo: #F3FBFF;
+  --texto: #123047;
+  --gris: #597080;
+  --blanco: #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  line-height: 1.6;
+  background: white;
+}
+a { text-decoration: none; color: inherit; }
+.container { width: min(1100px, 90%); margin: auto; }
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 15px #12304712;
+}
+nav {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: var(--azul);
+}
+.logo span { color: var(--verde); }
+.links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.links a:hover { color: var(--verde-oscuro); }
+.boton {
+  display: inline-block;
+  background: var(--azul);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+.boton:hover { background: var(--azul-oscuro); transform: translateY(-2px); }
+.boton-verde { background: var(--verde); color: #17320C; }
+.boton-verde:hover { background: #8ACB5B; }
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, #72B84235, transparent 30%),
+    linear-gradient(135deg, #EAF8FF, white 65%, #F3FBEF);
+  padding: 85px 0;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 45px;
+  align-items: center;
+}
+.etiqueta {
+  display: inline-block;
+  background: #EAF7E3;
+  color: var(--verde-oscuro);
+  border-radius: 30px;
+  padding: 7px 14px;
+  font-size: .85rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+.azul { color: var(--azul); }
+.verde { color: var(--verde-oscuro); }
+.hero p { color: var(--gris); font-size: 1.1rem; margin: 22px 0; }
+.hero-botones { display: flex; flex-wrap: wrap; gap: 12px; }
+.lata-fondo {
+  min-height: 390px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D9F2FF, #DDF0CD);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.lata {
+  height: 300px;
+  width: 155px;
+  border-radius: 23px 23px 30px 30px;
+  background: linear-gradient(90deg, #B9D2DD, white 25%, #F5FCFF 70%, #B5CFD9);
+  border: 1px solid #B5CFD9;
+  box-shadow: 18px 22px 35px #12304735;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(5deg);
+  position: relative;
+}
+.lata::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 90%;
+  height: 13px;
+  border-radius: 50%;
+  background: linear-gradient(#9EB7C1, white, #A9C0C9);
+}
+.lata .logo { font-size: 2.1rem; }
+.raya {
+  height: 5px;
+  width: 75%;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--azul), var(--verde));
+}
+.lata small { text-align: center; font-weight: bold; color: var(--azul-oscuro); }
+.limon { font-size: 3rem; margin-top: 12px; }
+.burbuja {
+  position: absolute;
+  border: 2px solid #078BCC55;
+  border-radius: 50%;
+}
+.b1 { width: 35px; height: 35px; left: 10%; top: 20%; }
+.b2 { width: 20px; height: 20px; right: 12%; top: 18%; }
+.b3 { width: 28px; height: 28px; right: 15%; bottom: 18%; }
+section { padding: 75px 0; }
+.titulo-seccion { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+.titulo-seccion h2, .contenido h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+.titulo-seccion p { margin-top: 12px; color: var(--gris); }
+.mini-titulo {
+  text-transform: uppercase;
+  color: var(--azul);
+  font-size: .8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.panel-visual {
+  background: linear-gradient(140deg, #E5F7FF, #EFF8E8);
+  padding: 40px;
+  border-radius: 28px;
+  text-align: center;
+}
+.panel-visual .limon { font-size: 6rem; }
+.panel-visual h3 { color: var(--azul-oscuro); font-size: 1.6rem; }
+.contenido p { color: var(--gris); margin: 15px 0; }
+.lista { list-style: none; margin: 20px 0; }
+.lista li { padding: 9px 0; }
+.lista li::before { content: "✓"; color: var(--verde-oscuro); font-weight: bold; margin-right: 10px; }
+.fondo-claro { background: var(--fondo); }
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.tarjeta {
+  border: 1px solid #DCEBF2;
+  border-radius: 22px;
+  padding: 26px;
+  background: white;
+  transition: .25s;
+}
+.tarjeta:hover { transform: translateY(-5px); box-shadow: 0 15px 35px #07598515; }
+.icono {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: #E8F6FF;
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+.tarjeta h3 { margin-bottom: 8px; color: var(--azul-oscuro); }
+.tarjeta p { color: var(--gris); }
+.diferencia {
+  background: linear-gradient(130deg, var(--azul-oscuro), #087FBA);
+  color: white;
+}
+.diferencia .mini-titulo { color: #BDE9FC; }
+.diferencia .titulo-seccion p { color: #D9EFF9; }
+.diferencia .tarjeta {
+  background: #FFFFFF12;
+  border-color: #FFFFFF30;
+}
+.diferencia .tarjeta h3 { color: white; }
+.diferencia .tarjeta p { color: #E0F3FC; }
+.diferencia .icono { background: var(--verde); }
+.audiencia {
+  background: #F0F9EA;
+  border-radius: 25px;
+  padding: 30px;
+}
+.etiquetas { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.etiquetas span {
+  background: white;
+  border: 1px solid #D6E9CB;
+  padding: 8px 13px;
+  border-radius: 30px;
+  font-size: .88rem;
+  font-weight: bold;
+}
+.equipo {
+  background: var(--fondo);
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.equipo p { margin: 8px 0; }
+.negocio-numero { color: var(--verde-oscuro); font-weight: 900; font-size: .8rem; }
+.cta {
+  background: linear-gradient(120deg, var(--azul), var(--azul-oscuro) 70%, var(--verde-oscuro));
+  padding: 45px;
+  border-radius: 28px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.cta p { margin-top: 10px; color: #E2F5FC; }
+.cta .boton { background: white; color: var(--azul-oscuro); white-space: nowrap; }
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.contacto-info p { color: var(--gris); margin: 15px 0; }
+.telefono { color: var(--azul); font-weight: bold; font-size: 1.3rem; }
+.formulario { display: grid; gap: 12px; }
+.formulario input, .formulario textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #D5E5ED;
+  border-radius: 12px;
+  font: inherit;
+}
+.formulario textarea { min-height: 120px; resize: vertical; }
+.formulario small { color: var(--gris); }
+footer { background: #082F49; color: white; padding: 30px 0; }
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+footer p, footer a { color: #C6DCE7; font-size: .9rem; }
+footer .logo { color: #66C7F0; }
+footer .logo span { color: #9BD56D; }
+.redes { display: flex; gap: 15px; flex-wrap: wrap; }
+
+@media(max-width: 800px) {
+  nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+  .links { gap: 12px; }
+  .hero-grid, .dos-columnas, .contacto-grid { grid-template-columns: 1fr; }
+  .hero { padding: 60px 0; }
+  .lata-fondo { min-height: 320px; }
+  .tarjetas { grid-template-columns: 1fr; }
+  .cta { flex-direction: column; align-items: flex-start; padding: 30px; }
+}
+@media(max-width: 420px) {
+  h1 { letter-spacing: -2px; }
+  .container { width: 92%; }
+  .links { font-size: .86rem; }
+  .links .boton { padding: 8px 12px; }
+  .panel-visual { padding: 25px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav class="container">
+    <a class="logo" href="#inicio" aria-label="INKIT inicio">IN<span>KIT</span></a>
+    <div class="links">
+      <a href="#producto">Producto</a>
+      <a href="#diferencia">Diferencia</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#modelo">Negocio</a>
+      <a class="boton" href="#contacto">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <span class="etiqueta">Agua gasificada + electrolitos</span>
+      <h1>Hidrátate <span class="azul">diferente.</span></h1>
+      <p>Conoce INKIT: agua gasificada con electrolitos y un refrescante sabor a limón. Una propuesta moderna para quienes buscan algo diferente.</p>
+      <div class="hero-botones">
+        <a class="boton" href="#producto">Conoce INKIT →</a>
+        <a class="boton boton-verde" href="#diferencia">¿Qué nos hace diferentes?</a>
+      </div>
+    </div>
+    <div class="lata-fondo" aria-label="Ilustración de una lata de INKIT sabor limón">
+      <span class="burbuja b1"></span><span class="burbuja b2"></span><span class="burbuja b3"></span>
+      <div class="lata">
+        <div class="logo">IN<span>KIT</span></div>
+        <div class="raya"></div>
+        <small>HIDRÁTATE<br>DIFERENTE</small>
+        <div class="limon">🍋</div>
+        <small>SABOR LIMÓN</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="producto">
+  <div class="container dos-columnas">
+    <div class="panel-visual">
+      <div class="limon">🍋</div>
+      <h3>El sabor de INKIT</h3>
+      <p>Limón · Burbujas · Electrolitos</p>
+    </div>
+    <div class="contenido">
+      <div class="mini-titulo">Nuestro producto</div>
+      <h2>Frescura con un toque cítrico.</h2>
+      <p>INKIT combina agua gasificada, electrolitos y sabor a limón en una bebida refrescante. Queremos ofrecer una alternativa que una las burbujas del agua gasificada con una propuesta de electrolitos.</p>
+      <ul class="lista">
+        <li>Agua gasificada.</li>
+        <li>Electrolitos en una sola bebida.</li>
+        <li>Un único sabor: limón.</li>
+        <li>Diseño moderno en azul y verde.</li>
+      </ul>
+      <p>La fórmula y la información nutricional definitivas se confirmarán antes de la venta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fondo-claro" id="sabor">
+  <div class="container">
+    <div class="titulo-seccion">
+      <div class="mini-titulo">Nuestro sabor</div>
+      <h2>Simple, cítrico y refrescante.</h2>
+      <p>INKIT comienza con una sola opción, creada alrededor del sabor a limón.</p>
+    </div>
+    <div class="tarjetas" style="grid-template-columns:minmax(0, 500px); justify-content:center;">
+      <article class="tarjeta">
+        <div class="icono">🍋</div>
+        <h3>Limón</h3>
+        <p>Un perfil cítrico que combina con la sensación burbujeante del agua gasificada y la propuesta de electrolitos de INKIT.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="diferencia" id="diferencia">
+  <div class="container">
+    <div class="titulo-seccion">
+      <div class="mini-titulo">¿Por qué INKIT?</div>
+      <h2>Una combinación diferente.</h2>
+      <p>La propuesta de INKIT reúne agua gasificada, electrolitos y limón en una bebida con identidad propia.</p>
+    </div>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <div class="icono">💧</div>
+        <h3>Burbujas + electrolitos</h3>
+        <p>Combina agua gasificada y electrolitos en una sola propuesta, en lugar de ofrecer únicamente agua mineral tradicional.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="icono">🍋</div>
+        <h3>Un sabor reconocible</h3>
+        <p>El limón da a INKIT un perfil cítrico claro y una identidad fácil de recordar.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="icono">🔵</div>
+        <h3>Marca con personalidad</h3>
+        <p>Su imagen azul y verde, junto con el mensaje “Hidrátate diferente”, ayuda a distinguir la marca.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="publico">
+  <div class="container dos-columnas">
+    <div class="contenido">
+      <div class="mini-titulo">Nuestro público</div>
+      <h2>Para quienes quieren probar algo distinto.</h2>
+      <p>INKIT está dirigida principalmente a jóvenes y adultos que disfrutan las bebidas refrescantes, buscan nuevas opciones y quieren variar de las bebidas tradicionales.</p>
+    </div>
+    <div class="audiencia">
+      <h3>¿A quién va dirigido?</h3>
+      <p>Personas que buscan una bebida para acompañar comidas, descansos y distintos momentos del día.</p>
+      <div class="etiquetas">
+        <span>Jóvenes y adultos</span>
+        <span>Estudiantes</span>
+        <span>Personas activas</span>
+        <span>Amantes del agua mineral</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fondo-claro" id="nosotros">
+  <div class="container dos-columnas">
+    <div class="contenido">
+      <div class="mini-titulo">Nuestra historia</div>
+      <h2>Una idea para refrescar lo cotidiano.</h2>
+      <p>INKIT nace como un proyecto emprendedor con la intención de crear una bebida diferente: agua gasificada con electrolitos y sabor a limón.</p>
+      <p>La idea busca unir burbujas, electrolitos y una identidad moderna en una propuesta sencilla y fácil de reconocer.</p>
+    </div>
+    <div class="equipo">
+      <div class="mini-titulo">Nuestro equipo</div>
+      <h3>Las personas detrás de INKIT</h3>
+      <p>Agrega los nombres reales de los integrantes y sus responsabilidades.</p>
+      <p><strong>Integrante 1:</strong> Nombre y rol</p>
+      <p><strong>Integrante 2:</strong> Nombre y rol</p>
+      <p><strong>Integrante 3:</strong> Nombre y rol</p>
+    </div>
+  </div>
+</section>
+
+<section id="modelo">
+  <div class="container">
+    <div class="titulo-seccion">
+      <div class="mini-titulo">Modelo de negocio</div>
+      <h2>Una marca con visión de crecer.</h2>
+      <p>Los precios y los canales comerciales se definirán con base en los costos y el avance del proyecto.</p>
+    </div>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <div class="negocio-numero">01 / PRODUCTO</div>
+        <h3>Presentación práctica</h3>
+        <p>Agua gasificada con electrolitos y sabor a limón. El tamaño y envase definitivos se confirmarán con el proveedor.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="negocio-numero">02 / PRECIO</div>
+        <h3>Precio por definir</h3>
+        <p>El precio de venta se establecerá según el costo de producción, el margen deseado y la respuesta de los posibles clientes.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="negocio-numero">03 / DISTRIBUCIÓN</div>
+        <h3>Venta y distribución</h3>
+        <p>Se buscarán tiendas y puntos de venta adecuados en Monterrey y, conforme avance el proyecto, nuevas oportunidades.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container cta">
+    <div>
+      <h2>¿Listo para hidratarte diferente?</h2>
+      <p>Conoce INKIT: agua gasificada con electrolitos y sabor a limón.</p>
+    </div>
+    <a class="boton" href="#contacto">Contáctanos →</a>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container contacto-grid">
+    <div class="contacto-info">
+      <div class="mini-titulo">Contacto</div>
+      <h2>Hablemos de INKIT.</h2>
+      <p>Para dudas, información del proyecto o posibles colaboraciones, puedes comunicarte con el CEO de INKIT.</p>
+      <p><strong>CEO de INKIT</strong></p>
+      <a class="telefono" href="tel:+528129604016">812 960 4016</a>
+      <p><strong>Ubicación:</strong> Monterrey, Nuevo León, México.</p>
+      <p><strong>Redes sociales:</strong> agrega aquí los enlaces oficiales de INKIT.</p>
+    </div>
+    <form class="formulario" id="formulario">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="correo" placeholder="Tu correo electrónico" required>
+      <textarea id="mensaje" placeholder="¿Qué te gustaría saber?" required></textarea>
+      <button class="boton" type="submit">Enviar mensaje por WhatsApp ↗</button>
+      <small>Se abrirá WhatsApp con tu mensaje preparado.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div>
+      <div class="logo">IN<span>KIT</span></div>
+      <p>Hidrátate diferente.</p>
+    </div>
+    <div class="redes">
+      <a href="#contacto">Contacto</a>
+      <a href="#producto">Producto</a>
+      <a href="#nosotros">Nosotros</a>
+    </div>
+    <p>© <span id="year"></span> INKIT</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("formulario").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nombre = document.getElementById("nombre").value.trim();
+  const correo = document.getElementById("correo").value.trim();
+  const mensaje = document.getElementById("mensaje").value.trim();
+
+  const texto = `Hola, soy ${nombre}. Mi correo es ${correo}.\\n\\n${mensaje}`;
+  const url = "https://wa.me/528129604016?text=" + encodeURIComponent(texto);
+
+  window.open(url, "_blank", "noopener,noreferrer");
+});
+</script>
+</body>
+</html>
+
+t
