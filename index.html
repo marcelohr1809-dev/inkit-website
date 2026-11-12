@@ -3,29 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0178d4">
+  <meta name="theme-color" content="#d62828">
 
   <title>INKIT | Hidrátate diferente</title>
-
-  <meta name="description"
-        content="INKIT, agua gasificada con electrolitos y sabor limón. Hidrátate diferente.">
+  <meta name="description" content="INKIT, agua gasificada con electrolitos y sabor Cherry. Hidrátate diferente.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --azul: #0178d4;
-      --verde: #439a1a;
+      --azul: #d62828;
+      --verde: #a4161a;
       --oscuro: #103247;
       --gris: #607684;
-      --celeste: #eaf9ff;
-      --menta: #eff9e9;
+      --celeste: #fff0f0;
+      --menta: #fff1f1;
       --blanco: #ffffff;
     }
 
@@ -35,9 +29,7 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Poppins", sans-serif;
@@ -67,26 +59,17 @@
       scroll-margin-top: 100px;
     }
 
-    h1, h2, h3 {
-      line-height: 1.15;
-    }
+    h1, h2, h3 { line-height: 1.15; }
 
     h2 {
       font-size: clamp(2rem, 4vw, 3.1rem);
       letter-spacing: -1px;
     }
 
-    p {
-      line-height: 1.8;
-    }
+    p { line-height: 1.8; }
 
-    .azul {
-      color: var(--azul);
-    }
-
-    .verde {
-      color: var(--verde);
-    }
+    .azul { color: var(--azul); }
+    .verde { color: var(--verde); }
 
     .etiqueta {
       display: inline-block;
@@ -144,7 +127,7 @@
       z-index: 100;
       background: #ffffffef;
       backdrop-filter: blur(14px);
-      box-shadow: 0 4px 20px #0178d415;
+      box-shadow: 0 4px 20px #d6282815;
     }
 
     nav {
@@ -162,9 +145,7 @@
       color: var(--azul);
     }
 
-    .logo span {
-      color: var(--verde);
-    }
+    .logo span { color: var(--verde); }
 
     .menu {
       display: flex;
@@ -178,25 +159,14 @@
       font-weight: 600;
     }
 
-    .menu a:hover {
-      color: var(--azul);
-    }
+    .menu a:hover { color: var(--azul); }
 
     /* PORTADA */
 
     .inicio {
       background:
-        radial-gradient(
-          circle at 85% 20%,
-          #439a1a25,
-          transparent 35%
-        ),
-        linear-gradient(
-          130deg,
-          #e9faff,
-          white 60%,
-          #eff9eb
-        );
+        radial-gradient(circle at 85% 20%, #a4161a25, transparent 35%),
+        linear-gradient(130deg, #fff0f0, white 60%, #fff1f1);
     }
 
     .inicio-grid {
@@ -210,7 +180,7 @@
       display: inline-block;
       padding: 10px 18px;
       border-radius: 30px;
-      background: #e2f5d8;
+      background: #ffe0e0;
       color: var(--verde);
       font-size: 0.8rem;
       font-weight: 800;
@@ -237,12 +207,8 @@
     .imagen-inicio {
       padding: 22px;
       border-radius: 35px;
-      background: linear-gradient(
-        135deg,
-        #b8f1ff,
-        #d8f4c7
-      );
-      box-shadow: 0 25px 60px #0178d425;
+      background: linear-gradient(135deg, #ffd6d6, #ffcaca);
+      box-shadow: 0 25px 60px #d6282825;
     }
 
     .imagen-inicio img {
@@ -263,14 +229,14 @@
     .tarjeta {
       padding: 34px 28px;
       background: white;
-      border: 1px solid #dcecf3;
+      border: 1px solid #f3dada;
       border-radius: 25px;
       transition: 0.3s;
     }
 
     .tarjeta:hover {
       transform: translateY(-7px);
-      box-shadow: 0 20px 45px #0178d415;
+      box-shadow: 0 20px 45px #d6282815;
     }
 
     .icono {
@@ -296,9 +262,7 @@
 
     /* PRODUCTO */
 
-    .producto {
-      background: var(--celeste);
-    }
+    .producto { background: var(--celeste); }
 
     .dos-columnas {
       display: grid;
@@ -308,11 +272,7 @@
     }
 
     .foto-producto {
-      background: linear-gradient(
-        135deg,
-        #d2f5ff,
-        #e0f5d5
-      );
+      background: linear-gradient(135deg, #ffdede, #ffcaca);
       padding: 25px;
       border-radius: 30px;
     }
@@ -347,34 +307,20 @@
     /* DIFERENCIACION */
 
     .diferencia {
-      background: linear-gradient(
-        135deg,
-        #0065b5,
-        var(--azul)
-      );
+      background: linear-gradient(135deg, #a4161a, var(--azul));
       color: white;
     }
 
-    .diferencia .etiqueta {
-      color: #c7f4a9;
-    }
-
-    .diferencia .titulo p {
-      color: #e0effa;
-    }
+    .diferencia .etiqueta { color: #ffc2c2; }
+    .diferencia .titulo p { color: #ffe0e0; }
 
     .diferencia .tarjeta {
       background: #ffffff12;
       border: 1px solid #ffffff35;
     }
 
-    .diferencia .tarjeta p {
-      color: #e0effa;
-    }
-
-    .diferencia .icono {
-      background: var(--verde);
-    }
+    .diferencia .tarjeta p { color: #ffe0e0; }
+    .diferencia .icono { background: var(--verde); }
 
     /* PUBLICO */
 
@@ -398,7 +344,7 @@
 
     .tag {
       background: white;
-      border: 1px solid #d7e9cc;
+      border: 1px solid #efbcbc;
       border-radius: 30px;
       padding: 10px 15px;
       font-size: 0.82rem;
@@ -406,9 +352,7 @@
 
     /* HISTORIA */
 
-    .historia {
-      background: #f7fcff;
-    }
+    .historia { background: #fff7f7; }
 
     .historia p {
       color: var(--gris);
@@ -417,9 +361,34 @@
 
     .equipo {
       background: white;
-      border: 2px dashed #b8ddec;
+      border: 2px dashed #efbcbc;
       border-radius: 25px;
       padding: 35px;
+    }
+
+    /* CONOCE A LA GENTE */
+
+    .gente { background: #fff0f0; }
+
+    .gente-imagen {
+      min-height: 400px;
+      background: white;
+      border: 3px dashed #d62828;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      text-align: center;
+      color: #a4161a;
+      font-weight: 700;
+    }
+
+    .gente-imagen img {
+      width: 100%;
+      max-height: 550px;
+      object-fit: contain;
+      border-radius: 20px;
     }
 
     /* NEGOCIO */
@@ -430,9 +399,7 @@
 
     /* FLYER */
 
-    .flyer {
-      background: var(--menta);
-    }
+    .flyer { background: var(--menta); }
 
     .flyer-imagen {
       max-width: 700px;
@@ -452,11 +419,7 @@
     /* CONTACTO */
 
     .contacto {
-      background: linear-gradient(
-        135deg,
-        #e8f8ff,
-        #f1faeb
-      );
+      background: linear-gradient(135deg, #fff0f0, #fff1f1);
     }
 
     .contacto-caja {
@@ -466,7 +429,7 @@
       padding: 55px;
       border-radius: 35px;
       text-align: center;
-      box-shadow: 0 20px 50px #0178d412;
+      box-shadow: 0 20px 50px #d6282812;
     }
 
     .contacto-caja p {
@@ -485,7 +448,7 @@
     /* PIE DE PAGINA */
 
     footer {
-      background: #082e49;
+      background: #641010;
       color: white;
       padding: 50px 0 25px;
     }
@@ -496,30 +459,23 @@
       gap: 35px;
     }
 
-    footer .logo {
-      color: #78caff;
-    }
-
-    footer .logo span {
-      color: #a0df83;
-    }
+    footer .logo { color: #ffaaaa; }
+    footer .logo span { color: #ffb3b3; }
 
     footer p {
-      color: #c8dce8;
+      color: #f5dada;
       font-size: 0.88rem;
       margin-top: 12px;
     }
 
-    footer a:hover {
-      color: #a0df83;
-    }
+    footer a:hover { color: #ffb3b3; }
 
     .copyright {
       text-align: center;
       border-top: 1px solid #ffffff25;
       padding-top: 22px;
       margin-top: 35px;
-      color: #c8dce8;
+      color: #f5dada;
       font-size: 0.8rem;
     }
 
@@ -542,35 +498,21 @@
         grid-template-columns: 1fr;
       }
 
-      .tarjetas {
-        grid-template-columns: 1fr;
-      }
+      .tarjetas { grid-template-columns: 1fr; }
 
-      section {
-        padding: 65px 0;
-      }
+      section { padding: 65px 0; }
     }
 
     @media (max-width: 500px) {
-      .inicio h1 {
-        letter-spacing: -2px;
-      }
+      .inicio h1 { letter-spacing: -2px; }
 
-      .botones-inicio .boton {
-        width: 100%;
-      }
+      .botones-inicio .boton { width: 100%; }
 
-      .contacto-caja {
-        padding: 30px 20px;
-      }
+      .contacto-caja { padding: 30px 20px; }
 
-      .publico-caja {
-        padding: 25px;
-      }
+      .publico-caja { padding: 25px; }
 
-      .menu a {
-        font-size: 0.78rem;
-      }
+      .menu a { font-size: 0.78rem; }
     }
   </style>
 </head>
@@ -589,6 +531,7 @@
       <a href="#producto">Producto</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="#gente">Conoce a la gente</a>
       <a href="#flyer">Flyer</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -616,7 +559,7 @@
       <p>
         INKIT combina agua gasificada,
         electrolitos y un refrescante sabor
-        a limón en una bebida con
+        Cherry en una bebida con
         personalidad propia.
       </p>
 
@@ -632,11 +575,10 @@
     </div>
 
     <div class="imagen-inicio">
-
       <img
-        Teal Green and Yellow Modern Drink Promotion Flyer.png
+        src="https://raw.githubusercontent.com/marcelohr1809-dev/inkit-website/main/Teal%20Green%20and%20Yellow%20Modern%20Drink%20Promotion%20Flyer.png"
+        alt="INKIT Cherry"
       >
-
     </div>
 
   </div>
@@ -681,10 +623,10 @@
       </article>
 
       <article class="tarjeta">
-        <div class="icono">🍋</div>
-        <h3>Sabor limón</h3>
+        <div class="icono">🍒</div>
+        <h3>Sabor Cherry</h3>
         <p>
-          Un sabor cítrico y fresco
+          Un sabor frutal y fresco
           que identifica a INKIT.
         </p>
       </article>
@@ -698,12 +640,10 @@
   <div class="contenedor dos-columnas">
 
     <div class="foto-producto">
-
       <img
         src="https://raw.githubusercontent.com/marcelohr1809-dev/inkit-website/main/Teal%20Green%20and%20Yellow%20Modern%20Drink%20Promotion%20Flyer.png"
-        alt="INKIT agua gasificada sabor limón"
+        alt="INKIT agua gasificada sabor Cherry"
       >
-
     </div>
 
     <div class="texto-producto">
@@ -717,7 +657,7 @@
       <p>
         INKIT es una propuesta de agua
         gasificada con electrolitos y
-        sabor limón, creada para ofrecer
+        sabor Cherry, creada para ofrecer
         una experiencia refrescante
         y diferente.
       </p>
@@ -725,9 +665,9 @@
       <ul class="lista">
         <li>Agua gasificada</li>
         <li>Con electrolitos</li>
-        <li>Un solo sabor: limón</li>
+        <li>Un solo sabor: Cherry</li>
         <li>Presentación de 355 mL según el flyer</li>
-        <li>Diseño moderno azul y verde</li>
+        <li>Diseño moderno rojo y blanco</li>
       </ul>
 
       <a href="#contacto" class="boton boton-verde">
@@ -767,11 +707,11 @@
       </article>
 
       <article class="tarjeta">
-        <div class="icono">🍋</div>
-        <h3>Identidad de limón</h3>
+        <div class="icono">🍒</div>
+        <h3>Identidad Cherry</h3>
         <p>
           Apostamos por un sabor
-          cítrico y reconocible.
+          frutal y reconocible.
         </p>
       </article>
 
@@ -780,7 +720,7 @@
         <h3>Marca moderna</h3>
         <p>
           Una identidad juvenil con
-          los colores oficiales azul y verde.
+          los colores oficiales rojo y blanco.
         </p>
       </article>
 
@@ -820,7 +760,7 @@
         <span class="tag">🎓 Estudiantes</span>
         <span class="tag">🏋️ Personas activas</span>
         <span class="tag">💼 Jóvenes adultos</span>
-        <span class="tag">🍋 Amantes del limón</span>
+        <span class="tag">🍒 Amantes del Cherry</span>
       </div>
     </div>
 
@@ -849,7 +789,7 @@
       <p>
         Nuestro objetivo es combinar
         agua gasificada, electrolitos
-        y sabor limón en una marca
+        y sabor Cherry en una marca
         moderna con identidad propia.
       </p>
     </div>
@@ -883,6 +823,41 @@
   </div>
 </section>
 
+<!-- CONOCE A LA GENTE -->
+<section class="gente" id="gente">
+  <div class="contenedor">
+
+    <div class="titulo">
+      <span class="etiqueta">Nuestro equipo</span>
+
+      <h2>
+        Conoce a la
+        <span class="azul">gente.</span>
+      </h2>
+
+      <p>
+        Conoce a las personas que están
+        detrás de INKIT y hacen posible este proyecto.
+      </p>
+    </div>
+
+    <div class="gente-imagen">
+
+      <!-- AQUÍ PON TU IMAGEN -->
+      <!-- Reemplaza este espacio por tu fotografía -->
+
+      <p>
+        📸 AQUÍ VA TU IMAGEN DEL EQUIPO INKIT
+        <br>
+        <br>
+        Cambia este espacio por tu fotografía.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- MODELO DE NEGOCIO -->
 <section class="negocio" id="modelo">
   <div class="contenedor">
@@ -908,7 +883,7 @@
       <article class="tarjeta">
         <h3>01. Producto</h3>
         <p>
-          INKIT Limón: agua gasificada
+          INKIT Cherry: agua gasificada
           con electrolitos.
         </p>
       </article>
@@ -1026,7 +1001,7 @@
 
         <p>
           Agua gasificada con electrolitos
-          y sabor limón.
+          y sabor Cherry.
         </p>
       </div>
 
@@ -1067,3 +1042,4 @@
 
 </body>
 </html>
+
